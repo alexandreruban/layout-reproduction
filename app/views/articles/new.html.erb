@@ -2,4 +2,6 @@
 
 <%= link_to "Back to articles", articles_path %>
 
-<%= render "form", article: @article %>
+<%= turbo_frame_tag "new_article" do %>
+  <%= render "form", article: @article %>
+<% end %>
